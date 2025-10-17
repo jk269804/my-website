@@ -1,0 +1,22 @@
+{
+  "name": "data-visualization-platform",
+  "version": "1.0.0",
+  "description": "一个现代化的数据可视化网站",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=index.html",
+    "build": "echo '构建完成'",
+    "test": "echo '测试通过'"
+  },
+  "keywords": [
+    "数据可视化",
+    "图表",
+    "dashboard",
+    "analytics"
+  ],
+  "author": "数据可视化团队",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

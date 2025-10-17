@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>📊 数据可视化平台</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#dashboard" class="nav-link active">仪表板</a></li>
+                <li><a href="#charts" class="nav-link">图表分析</a></li>
+                <li><a href="#data" class="nav-link">数据管理</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="dashboard" class="dashboard-section">
+            <div class="section-header">
+                <h2>数据仪表板</h2>
+                <div class="controls">
+                    <select id="timeRange" class="control-select">
+                        <option value="day">今日</option>
+                        <option value="week">本周</option>
+                        <option value="month" selected>本月</option>
+                        <option value="year">今年</option>
+                    </select>
+                    <button id="refreshBtn" class="control-btn">刷新数据</button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-content">
+                        <h3>总销售额</h3>
+                        <p class="stat-value" id="totalSales">¥ 0</p>
+                        <span class="stat-change positive">+12.5%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <h3>用户数量</h3>
+                        <p class="stat-value" id="totalUsers">0</p>
+                        <span class="stat-change positive">+8.3%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🛒</div>
+                    <div class="stat-content">
+                        <h3>订单数量</h3>
+                        <p class="stat-value" id="totalOrders">0</p>
+                        <span class="stat-change negative">-2.1%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-content">
+                        <h3>平均订单值</h3>
+                        <p class="stat-value" id="avgOrder">¥ 0</p>
+                        <span class="stat-change positive">+5.7%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>销售趋势</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>用户分布</h3>
+                    <canvas id="usersChart"></canvas>
+                </div>
+                <div class="chart-container full-width">
+                    <h3>产品类别分析</h3>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>地域分布</h3>
+                    <canvas id="regionChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 数据可视化平台. 所有权利保留.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
